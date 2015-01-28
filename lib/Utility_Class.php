@@ -95,7 +95,7 @@
             
             // binds the parameters passed through script into an associative array
             for($i = 6; $i < $arrayCount; $i++) {
-                if($i != '-d') {
+                if($args[$i] != '-d') {
                     if(strpos($args[$i], '=')) {
                         $explodedArray = explode('=', $args[$i]);
                         $this->dataHeader[$explodedArray[0]] = $explodedArray[1];
