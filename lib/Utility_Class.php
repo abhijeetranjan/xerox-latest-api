@@ -95,11 +95,13 @@
             
             // binds the parameters passed through script into an associative array
             for($i = 6; $i < $arrayCount; $i++) {
-                if(strpos($args[$i], '=')) {
-                    $explodedArray = explode('=', $args[$i]);
-                    $this->dataHeader[$explodedArray[0]] = $explodedArray[1];
-                } else {
-                    array_push($this->dataHeader, $args[$i]);  // function is used to push the values into array                  
+                if($i != '-d') {
+                    if(strpos($args[$i], '=')) {
+                        $explodedArray = explode('=', $args[$i]);
+                        $this->dataHeader[$explodedArray[0]] = $explodedArray[1];
+                    } else {
+                        array_push($this->dataHeader, $args[$i]);  // function is used to push the values into array                  
+                    }
                 }
             }                                  
             $repoFactory->response($this->username, $this->password, $this->dataHeader);
