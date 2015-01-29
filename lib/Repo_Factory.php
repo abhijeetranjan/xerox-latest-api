@@ -17,7 +17,7 @@ class Repo_Factory
     public static function createRepoUrl($repoIdentifier) 
     {        
         if(!filter_var($repoIdentifier, FILTER_VALIDATE_URL)) {            
-            $repoIdentifier = ucfirst($repoIdentifier);
+            $repoIdentifier = ucfirst(strtolower($repoIdentifier));
             self::__autoload($repoIdentifier);
             return new $repoIdentifier();
         } else {            
