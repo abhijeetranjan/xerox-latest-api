@@ -35,7 +35,7 @@ The steps to setup:
 [NOTE] 	: You need to have 'Issue Tracking' enabled in you BitBucket repository.
 
 ----------------------------------------------------------------------------------------------------------
-[Syntax]: [-u] [username] [-p] [password] [repositoryURL] [-d] ["title"] ["body/content"] ["other data"]
+[Syntax]: [-u] [username] [-p] [password] [repositoryURL] ["title"] ["body/content"] ["other data"]
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -63,9 +63,9 @@ Returns valid error/success message.
 [NOTE/Optional] : default GitHub(defined in GITHUB_REPO_URL variable) and BitBucket(defined in BITBUCKET_REPO_URL variable)  repository url can also be provided on config.php file (to be found on api directory).
 And, then the script can also be used as,
 
-php create-ticket.php -u username -p password github/GITHUB -d "Issue Title" "Issue Description"
+php create-ticket.php -u username -p password github/GITHUB "Issue Title" "Issue Description"
 
-php create-ticket.php -u username -p password bitbucket/BITBUCKET -d "Issue Title" "Issue Description"
+php create-ticket.php -u username -p password bitbucket/BITBUCKET "Issue Title" "Issue Description"
 
 [Default BitBucket/GitHub URL is provided in config.php]
 
